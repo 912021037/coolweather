@@ -1,18 +1,16 @@
 package com.coolweather.android.db;
 
-public class City {
+import org.litepal.annotation.Column;
+import org.litepal.crud.LitePalSupport;
 
-    private int id;
+public class City extends LitePalSupport {
+
+    @Column(nullable = false, defaultValue = " ")
     private String cityName;
+
+    @Column(unique = true, nullable = false)
     private int cityCode;
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getCityName() {
         return cityName;

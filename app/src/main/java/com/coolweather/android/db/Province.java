@@ -5,6 +5,8 @@ import org.litepal.crud.LitePalSupport;
 
 public class Province extends LitePalSupport {
 
+    private int id;
+
     @Column(nullable = false, defaultValue = " ")
     private String provinceName;
 
@@ -17,6 +19,14 @@ public class Province extends LitePalSupport {
 
     public void setProvinceName(String provinceName) {
         this.provinceName = provinceName;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getProvinceCode() {
